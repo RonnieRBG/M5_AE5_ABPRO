@@ -74,13 +74,12 @@ public class ClienteDAO {
 		
 	}
 	
-	// Método necesario para cargar los datos en el formulario de edición
     public Cliente obtenerPorId(int id) {
         Cliente c = null;
         String sql = "SELECT * FROM clientes WHERE id = ?";
         
         try {
-            // Usamos la conexión que ya tienes definida en la clase
+      
             PreparedStatement ps = conn.prepareStatement(sql);
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
@@ -99,7 +98,7 @@ public class ClienteDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return c; // Retorna el cliente encontrado o null si no existe
+        return c; 
     }
 
 
