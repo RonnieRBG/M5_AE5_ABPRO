@@ -112,8 +112,7 @@ public class ClienteDAO {
 	        ps.setString(1, c.getNombre());
 	        ps.setString(2, c.getDescripcion());
 	        ps.setInt(3, c.getTelefono());
-	        ps.setInt(4, c.getId()); // Importante: el ID va al final en el WHERE
-	        
+	        ps.setInt(4, c.getId()); 	        
 	        ps.executeUpdate();
 	    } catch (SQLException e) {
 	        e.printStackTrace();
